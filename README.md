@@ -4,13 +4,16 @@ Uma calculadora simples e funcional para somar ou subtrair **anos, meses e dias*
 Desenvolvida com **HTML**, **JavaScript** e estilizada com **Tailwind CSS**. 🌱
 
 ---
-
 ## ✨ Prévia do Projeto
 
 <div align="center">
   <img src="./src/calc.jpg" alt="Exemplo da calculadora de datas" width="500"/>
   <p><i>📸 Exemplo de uso da interface da Calculadora de Datas</i></p>
 </div>
+
+## 🚀 Teste Agora!
+
+👉 [Clique aqui para testar o projeto](https://darkphoenixbr.github.io/CalculatorPro/)  
 
 ---
 
@@ -31,12 +34,6 @@ Desenvolvida com **HTML**, **JavaScript** e estilizada com **Tailwind CSS**. �
 - 🔹 **HTML5**
 - 🔸 **JavaScript (Vanilla)**
 - 🔹 **Tailwind CSS v2.2.19**
-
----
-
-## 🚀 Teste Agora!
-
-👉 [Clique aqui para testar o projeto](https://darkphoenixbr.github.io/CalculatorPro/)  
 
 ---
 
