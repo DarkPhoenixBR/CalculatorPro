@@ -1,9 +1,6 @@
 # 📅 Calculadora de Datas
 
 Uma calculadora simples e funcional para somar ou subtrair **anos, meses e dias** a partir de uma data inicial. Desenvolvida com **HTML**, **JavaScript** e estilizada com **Tailwind CSS**.
-
-![Calculadora de Datas - Interface](https://user-images.githubusercontent.com/your-username/aqui-entra-screenshot.png) <!-- Substitua com o link de um screenshot do seu projeto, caso queira -->
-
 ---
 
 ## 🧠 Funcionalidades
