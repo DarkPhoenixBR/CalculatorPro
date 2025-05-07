@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de Datas</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function calcularData(tipo) {
+      const dataInicial = new Date(document.getElementById("data-inicial").value);
+      const anos = parseInt(document.getElementById("anos").value) || 0;
+      const meses = parseInt(document.getElementById("meses").value) || 0;
+      const dias = parseInt(document.getElementById("dias").value) || 0;
+
+      let novaData = new Date(dataInicial);
+      if (tipo === 'somar') {
+        novaData.setFullYear(novaData.getFullYear() + anos);
+        novaData.setMonth(novaData.getMonth() + meses);
+        novaData.setDate(novaData.getDate() + dias);
+      } else {
+        novaData.setFullYear(novaData.getFullYear() - anos);
+        novaData.setMonth(novaData.getMonth() - meses);
+        novaData.setDate(novaData.getDate() - dias);
+      }
+
+      const resultado = novaData.toLocaleDateString('pt-BR');
+      document.getElementById("resultado").innerText = resultado;
+    }
+  </script>
+</head>
+<body class="bg-green-50 flex items-center justify-center min-h-screen p-4">
+  <div class="bg-white rounded-xl shadow-lg p-6 max-w-md w-full border border-green-100">
+    <!-- Ícone -->
+    <div class="flex justify-center mb-4">
+      <div class="bg-green-100 p-3 rounded-full">
+        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-13 9h16a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Título -->
+    <h1 class="text-center text-lg font-semibold text-green-800 mb-6">Calculadora de Datas</h1>
+
+    <!-- Data Inicial -->
+    <label class="block text-sm text-gray-700 mb-1">Data Inicial</label>
+    <input type="date" id="data-inicial" class="w-full p-2 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 mb-4" />
+
+    <!-- Entrada de anos, meses, dias -->
+    <div class="grid grid-cols-3 gap-2 mb-4">
+      <input id="anos" type="number" placeholder="Anos" class="p-2 border border-green-300 rounded-md text-sm" />
+      <input id="meses" type="number" placeholder="Meses" class="p-2 border border-green-300 rounded-md text-sm" />
+      <input id="dias" type="number" placeholder="Dias" class="p-2 border border-green-300 rounded-md text-sm" />
+    </div>
+
+    <!-- Botões -->
+    <div class="flex gap-2 mb-4">
+      <button onclick="calcularData('somar')" class="flex-1 bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 rounded-md flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+        Somar
+      </button>
+      <button onclick="calcularData('subtrair')" class="flex-1 bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 rounded-md flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4" />
+        </svg>
+        Subtrair
+      </button>
+    </div>
+
+    <!-- Resultado -->
+    <div class="bg-green-50 p-3 rounded-md text-center border border-green-200">
+      <p class="text-xs text-gray-600">Resultado:</p>
+      <p id="resultado" class="text-lg font-semibold text-green-800">--/--/----</p>
+    </div>
+  </div>
+</body>
+</html>
